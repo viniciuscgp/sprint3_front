@@ -1,0 +1,90 @@
+{% extends 'base.html' %}
+
+{% block title %}Register{% endblock %}
+
+{% block content %}
+<div class="container h-100">
+    <div class="row justify-content-center align-items-center h-100">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-body">
+                    <h3 class="card-title text-center">Create new Account</h3>
+                    <form>
+                        <div class="form-group">
+                            <label for="email">Email (your login)</label>
+                            <input type="email" class="form-control" id="email" required placeholder="Type your email">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="nome">Name</label>
+                            <input type="text" class="form-control" id="name" placeholder="Type your name" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="senha">Password</label>
+                            <input type="password" class="form-control" id="password1" required
+                                placeholder="Type your password">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="repetirSenha">Confirm</label>
+                            <input type="password" class="form-control" id="password2" required
+                                placeholder="Confirm your password">
+                        </div>
+
+                        <button id="btn_register" type="submit" class="btn btn-primary btn-block">Register</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Formulario para criação da nova conta  --------------------------->
+<div class="container h-100">
+    <div class="row justify-content-center align-items-center h-100">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-body">
+                    <h3 class="card-title text-center">Create new Account</h3>
+                    <form>
+                        <fieldset>
+                            <legend>Account Information</legend>
+                            <div class="form-group">
+                                <label for="email">Email (your login)</label>
+                                <input type="email" class="form-control" id="email" required
+                                    placeholder="Type your email">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="nome">Name</label>
+                                <input type="text" class="form-control" id="name" placeholder="Type your name" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="senha">Password</label>
+                                <input type="password" class="form-control" id="password1" required
+                                    placeholder="Type your password" aria-describedby="passwordHelp">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="repetirSenha">Confirm</label>
+                                <input type="password" class="form-control" id="password2" required
+                                    placeholder="Confirm your password" aria-describedby="passwordHelp">
+                            </div>
+                            <!-- Você pode adicionar uma div para mensagens de erro relacionadas à senha aqui, e referenciá-la usando aria-describedby -->
+                            <!-- <div id="passwordHelp">Passwords do not match</div> -->
+                        </fieldset>
+
+                        <button id="btn_register" type="submit" class="btn btn-primary btn-block">Register</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Scripts -------------------------------------------->
+<script src="{{ url_for('static', filename='js/register.js') }}"></script>
+{% endblock %}

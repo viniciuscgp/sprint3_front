@@ -1,0 +1,156 @@
+* {
+    box-sizing: border-box;
+}
+
+body,
+html {
+    height: 100%;
+    margin: 0;
+}
+
+.CodeMirror {
+    resize: vertical;
+    overflow: auto;
+    height: 100%;
+}
+
+.main {
+    height: calc(100vh - 200px);
+}
+
+header {
+    flex-shrink: 0;
+}
+
+.toolbar {
+    background-color: rgb(230, 230, 230);
+    padding: 5px 5px;
+}
+
+#output {
+    min-height: 150px;
+    background-color: lightgray;
+    resize: horizontal;
+}
+
+#input {
+    resize: horizontal;
+}
+
+
+.file-btn {
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    padding: 5px 15px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    border: none;
+    width: 150px;
+    color: white;
+}
+
+.file-btn:hover {
+    color: rgb(240, 236, 10, 1);
+    font-weight: bolder;
+}
+
+.file-delete-btn {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+    color: red;
+    padding: 5px 15px;
+    border: none;
+    background-color: gold;
+}
+
+.file-delete-btn:hover {
+    background-color: rgba(255, 0, 0, 0.1);
+}
+
+/* Estilos do Modal */
+#askQuestionModal .modal-header {
+    background-color: #306998;
+    color: white;
+}
+
+#askQuestionModal .modal-body {
+    background-color: #e0f0ff;
+    color: #333;
+}
+
+#askQuestionModal #modalMessage {
+    font-size: larger;
+    font-weight: bold;
+}
+
+#askQuestionModal .modal-footer {
+    background-color: #f3c614;
+    color: white;
+}
+
+#askQuestionModal #yesButton {
+    background-color: #306998;
+    color: #ffffff;
+    border: none;
+}
+
+#askQuestionModal #noButton {
+    background-color: #306998;
+    color: #ffffff;
+    border: none;
+}
+
+#askQuestionModal #yesButton:hover {
+    background-color: #0d3b61;
+}
+
+#askQuestionModal #noButton:hover {
+    background-color: #0d3b61;
+}
+
+
+/* Estilos do Modal que pede string */
+#saveFileModal .modal-header {
+    background-color: #306998;
+    color: white;
+}
+
+#saveFileModal .modal-body {
+    background-color: #e0f0ff;
+    color: #333;
+}
+
+#saveFileModal .modal-body input {
+    margin-top: 10px;
+    /* Espaçamento adicional para o input */
+}
+
+#saveFileModal .modal-footer {
+    background-color: #f3c614;
+    color: white;
+}
+
+#saveFileModal #saveFileButton {
+    background-color: #306998;
+    color: #ffffff;
+    border: none;
+}
+
+#saveFileModal #cancelButton {
+    background-color: #306998;
+    color: #ffffff;
+    border: none;
+}
+
+#saveFileModal #saveFileButton:hover {
+    background-color: #0d3b61;
+}
+
+#saveFileModal #cancelButton:hover {
+    background-color: #0d3b61;
+}

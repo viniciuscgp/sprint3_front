@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+
+{% block title %}Login{% endblock %}
+
+{% block content %}
+<div class="container h-100">
+    <div class="row justify-content-center align-items-center h-100">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-body">
+                    <h3 class="card-title text-center">Who are you ?</h3>
+                    <form action="#">
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input
+                                id="email"
+                                type="email"
+                                class="form-control"
+                                placeholder="Enter your email"
+                                autocomplete="username">
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Password</label>
+                            <input
+                                id="password"
+                                type="password"
+                                class="form-control"
+                                autocomplete="current-password"
+                                placeholder="Enter your password">
+                        </div>
+                        <div id="error-message" class="alert alert-danger mt-2 mb-2 d-none"></div>
+                        <button id="btn_login" type="submit" class="btn btn-primary btn-block">Login</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Scripts ------------------------------- -->
+<script src="{{ url_for('static', filename='js/login.js') }}"></script>
+{% endblock %}
