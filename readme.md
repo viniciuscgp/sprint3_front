@@ -2,7 +2,7 @@
 
 CleanIDE é uma ambiente de desenvolvimento integrado (IDE) construída com Python e Flask, que permite aos desenvolvedores escrever, compilar e armazenar códigos-fonte em três linguagens populares: C, Java e Python.
 
-![Imagem da Interface](app\static\images\clean_ide.png) 
+![Imagem da Interface](https://github.com/viniciuscgp/sprint3_front/blob/main/app/static/images/clean_ide.png) 
 
 ## 📁 Estrutura do Projeto
 
@@ -47,6 +47,28 @@ Navegue até cada pasta de projeto e construa as imagens Docker:
 
 4. **Acesse a CleanIDE**:
     Abra seu navegador e acesse `http://127.0.0.1:5006`.
+
+5. **Imagens Docker já criadas**:
+
+    Front:
+    ```bash
+    docker pull viniciuscgp/sprint3_front
+    ```
+
+    Compiler:
+    ```bash 
+    docker pull viniciuscgp/sprint3_api_compiler
+    ```
+
+    Files:
+    ```bash
+    docker pull viniciuscgp/sprint3_api_files
+    ```
+
+    Users:
+    ```bash
+    docker pull viniciuscgp/sprint3_api_users
+    ```
 
 ## 🔒 Segurança
 
