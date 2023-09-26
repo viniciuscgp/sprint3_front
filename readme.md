@@ -7,6 +7,7 @@ CleanIDE é uma ambiente de desenvolvimento integrado (IDE) construída com Pyth
 ## 📁 Estrutura do Projeto
 
 O projeto está organizado em três APIs backend e uma interface frontend:
+[Estrutura no Figma](https://www.figma.com/file/JJIe2fnt54zFJec0kABbbL/CleanIDE?type=design&node-id=0%3A1&mode=design&t=iXowJw1r0zspK2bS-1)
 
 ### 1. 📂 API Files
 
