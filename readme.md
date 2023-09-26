@@ -2,7 +2,7 @@
 
 CleanIDE é uma ambiente de desenvolvimento integrado (IDE) construída com Python e Flask, que permite aos desenvolvedores escrever, compilar e armazenar códigos-fonte em três linguagens populares: C, Java e Python.
 
-![Imagem da Interface]([app\static\images\clean_ide.png](https://github.com/viniciuscgp/sprint3_front/blob/main/app/static/images/clean_ide.png) 
+![Imagem da Interface]([app\static\images\clean_ide.png](https://github.com/viniciuscgp/sprint3_front/blob/main/app/static/images/clean_ide.png]) 
 
 ## 📁 Estrutura do Projeto
 
