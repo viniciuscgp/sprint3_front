@@ -27,35 +27,40 @@
 <!-- TOOL BAR -->
 <div class="container-fluid d-flex flex-row justify-content-between">
     <div class="">
-        <button id="btn_save" class="btn btn-primary" disabled>
+        <button id="btn_save" class="btn btn-primary" disabled title="Save you source code">
             <i class="fas fa-save"></i> <span class="d-none d-sm-inline">Save</span>
         </button>
 
-        <button id="btn_new" class="btn btn-primary">
+        <button id="btn_new" class="btn btn-primary" title="New source code">
             <i class="fas fa-file"></i> <span class="d-none d-sm-inline">New</span>
         </button>
 
-        <button id="btn_share" class="btn btn-primary" disabled>
+        <button id="btn_share" class="btn btn-primary" disabled title="Share you creation">
             <i class="fas fa-share-alt"></i> <span class="d-none d-sm-inline">Share</span>
         </button>
 
         <button id="btn_mysources" class="btn btn-warning" type="button" data-toggle="collapse" data-target="#mySources"
-            aria-expanded="false" aria-controls="mySources">
+            aria-expanded="false" aria-controls="mySources" title="Show all your saved source">
             <i class="fas fa-code"></i> <span class="d-none d-sm-inline">My sources</span>
         </button>
     </div>
 
     <div class="form-row">
-        <button class="cols btn btn-success px-2" disabled id="run">
+        <button class="cols btn btn-success px-2" disabled id="run" title="Run your code">
             <i class="fas fa-play"></i> <span class="d-none d-sm-inline">Run</span>
         </button>
 
         <label class="col-form-label font-weight-bold d-none d-sm-inline">Lang: </label>
-        <select class="col" style="width: 90px" id="lang">
+        <select class="col" style="width: 90px" id="lang" title="Select the language">
             <option value="python">Python</option>
             <option value="c">C</option>
             <option value="java">Java</option>
         </select>
+
+        <!-- Botão de Help adicionado -->
+        <button class="ml-1 cols btn btn-info px-2" id="btn_help" title="Show help about text selected in the editor">
+            <i class="fas fa-question-circle"></i> <span class="d-none d-sm-inline">Help</span>
+        </button>
     </div>
 
 </div>

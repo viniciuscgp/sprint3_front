@@ -39,6 +39,13 @@ const extension_lang = {
     ".java": "java"
 }
 
+const help = {
+    "python": python_help,
+    "c": c_help,
+    "java": java_help
+
+}
+
 function setup_all() {
     var elem_lang = document.getElementById("lang");
     var elem_theme = document.getElementById("theme");
@@ -51,6 +58,7 @@ function setup_all() {
     var elem_btn_new = document.getElementById("btn_new");
     var elem_btn_share = document.getElementById("btn_share");
     var elem_btn_mysources = document.getElementById("btn_mysources");
+    var elem_btn_help = document.getElementById("btn_help");
 
     activate_menu(0);
 
@@ -68,6 +76,7 @@ function setup_all() {
     elem_btn_new.addEventListener("click", new_code);
     elem_btn_share.addEventListener("click", share_twitter);
     elem_btn_mysources.addEventListener("click", show_sources);
+    elem_btn_help.addEventListener("click", show_help);
 
 
     myCodeMirror = CodeMirror.fromTextArea(elem_code, {
@@ -436,3 +445,31 @@ function java_example() {
 
     myCodeMirror.setValue(code.join("\n"));
 }
+
+function getSelectedText() {
+    return myCodeMirror.getSelection();
+}
+
+function show_help() {
+    let lang = document.getElementById('lang').value.toLowerCase();
+
+    if (lang) help[lang](getSelectedText());
+}
+
+function python_help(to_search) {
+    let query = "python reference " + to_search;
+    window.open("https://www.google.com/search?q=" + query, "_blank");
+}
+
+function c_help(to_search) {
+    let query = to_search;
+    window.open("https://cplusplus.com/reference/cstdio/" + query, "_blank");
+}
+
+function java_help(to_search) {
+    let query = "java language " + to_search;
+    window.open("https://www.google.com/search?q=" + query, "_blank");
+}
+
+
+

@@ -12,63 +12,70 @@ O projeto está organizado em três APIs backend e uma interface frontend:
 
 - **Responsabilidade**: Armazenar o código-fonte dos usuários.
 - **Autenticação**: Autenticação via JWT é necessária para armazenar arquivos. Usuários sem autenticação podem usar a CleanIDE, mas não podem salvar seus arquivos.
-- **Documentação**: Acesse a documentação Swagger pelo endpoint `/`. Roda na porta 5000.
+- **Documentação**: Acesse a documentação Swagger pelo endpoint `/`. 
++ **Roda na porta 5000**
 
 ### 2. 📂 API Compiler
 
-- **Responsabilidade**: Interface com um serviço externo de compilação, proporcionando compilação em tempo real nas linguagens suportadas. 
-- **Documentação**: Acesse a documentação Swagger pelo endpoint `/`. Roda na porta 5001.
+- **Responsabilidade**: Interface com um serviço externo de compilação, proporcionando compilação em tempo real nas linguagens suportadas. Atualmente tem suporte pra 2 serviços, configurados via .env
+- **Documentação**: Acesse a documentação Swagger pelo endpoint `/`. 
++ **Roda na porta 5001**
 
 ### 3. 📂 API Users
 
 - **Responsabilidade**: Gerenciamento de usuários, incluindo registro, login e outras funcionalidades de perfil.
-- **Documentação**: Acesse a documentação Swagger pelo endpoint `/`. Roda na porta 5002.
+- **Documentação**: Acesse a documentação Swagger pelo endpoint `/`. 
++ **Roda na porta 5002**
 
-### 4. 📂 CleanIDE Frontend
+### 4. 📂 CleanIDE Funcionamento
 
-- **Responsabilidade**: Interface gráfica para interação com as APIs, oferecendo uma experiência de codificação fluída e intuitiva. Roda sempre na porta 5006. 
+- **Responsabilidade**: Interface gráfica para interação com as APIs, oferecendo uma experiência de codificação fluída e intuitiva. 
++ **Roda sempre na porta 5006**
 
-## 🚀 Início Rápido
-
-1. **Clone o Repositório**:
+## 🚀 Configurando o ambiente
+1. **Clone dos Repositório**:
+1.1 *🚨 ATENÇÃO 🚨 Os repostóríos devem ser clonados dentro da mesma pasta 'pai' para que os script (.bat) funcionem corretamente.*
++ Clone do Frontend
    ```bash
-   git clone url_do_repositorio.git
+   git clone https://github.com/viniciuscgp/sprint3_front.git
+
++ Clone da API Compiler   
+    ```bash
+    git clone https://github.com/viniciuscgp/sprint3_api_compiler.git
+    ```
+
++ Clone da API Files
+    ```bash
+    git clone https://github.com/viniciuscgp/sprint3_api_files.git
+    ```
+
++ Clone da API Users
+    ```bash
+    git clone https://github.com/viniciuscgp/sprint3_api_users.git
+    ```
 
 2. **Construa as Imagens Docker**:
-Navegue até cada pasta de projeto e construa as imagens Docker:
++ Navegue até cada pasta do projeto do front e execute o script:
     ```bash
-    docker build -t nome_da_imagem .
-
+    recria_imagens.bat
+    ```
 3. **Inicie os Serviços**:
-    Use o comando a seguir para cada serviço:
++ Navegue até cada pasta do projeto do front e execute o script:
     ```bash
-    docker run -p PORTA_HOST:5000 nome_da_imagem
-
+    sobe_servicos.bat
+    ```
 
 4. **Acesse a CleanIDE**:
     Abra seu navegador e acesse `http://127.0.0.1:5006`.
 
-5. **Imagens Docker já criadas**:
-
-    Front:
-    ```bash
-    docker pull viniciuscgp/sprint3_front
-    ```
-
-    Compiler:
-    ```bash 
-    docker pull viniciuscgp/sprint3_api_compiler
-    ```
-
-    Files:
-    ```bash
-    docker pull viniciuscgp/sprint3_api_files
-    ```
-
-    Users:
-    ```bash
-    docker pull viniciuscgp/sprint3_api_users
-    ```
+6. **Resumindo, são 3 scripts pra lhe ajudar:**
+    São provendiados 3 scripts:
+    - **sobe_servicos.bat**
+        + Esse script carrega TODOS os containers automaticamente. 
+    - **para_servicos.bat**
+        + Esse script para TODOS os containers
+    - **recria_imagens.bat**
+        + Esse script para TODOS os containers, RECRIA todos e depois INICIA todos novamente.
 
 ## 🔒 Segurança
 
@@ -76,7 +83,7 @@ Navegue até cada pasta de projeto e construa as imagens Docker:
 
 ## 🤝 Contribuições
 
-    Contribuições são bem-vindas! Por favor, leia o arquivo `CONTRIBUTING.md` para detalhes sobre o processo de submissão de pull requests.
+    Contribuições são bem-vindas! 
 
 ## 📜 Licença
 
