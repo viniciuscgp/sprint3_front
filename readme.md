@@ -27,7 +27,7 @@ O projeto está organizado em três APIs backend e uma interface frontend:
 - **Responsabilidade**: Gerenciamento de usuários, incluindo registro, login e outras funcionalidades de perfil.
 - **Documentação**: Acesse a documentação Swagger pelo endpoint `/`. 
 + **Roda na porta 5002**
-
++ Utilize o **EMAIL**: admin@teste.com e a **SENHA**: 1234 para teste.
 ### 4. 📂 CleanIDE Funcionamento
 
 - **Responsabilidade**: Interface gráfica para interação com as APIs, oferecendo uma experiência de codificação fluída e intuitiva. 
